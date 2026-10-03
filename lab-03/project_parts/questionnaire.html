@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Завдання 4 - Анкета</title>
+</head>
+<body>
+
+<a href="../index.html">Повернутись на головну</a>
+<h1>Анкета користувача</h1>
+<form action="" method="post" enctype="multipart/form-data">
+
+    <fieldset>
+        <legend>Особисті дані</legend>
+
+        <p>
+            <label for="username">ПІБ (Текст):</label><br>
+            <input type="text" id="username" name="username"
+                   placeholder="Прізвище Ім'я" required tabindex="1">
+        </p>
+
+        <p>
+            <label for="email">Email (з перевіркою):</label><br>
+            <input type="email" id="email" name="user_email"
+                   placeholder="example@mail.com" autocomplete="off"
+                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                   required tabindex="2">
+        </p>
+
+        <p>
+            <label for="phone">Номер телефону:</label><br>
+            <input type="tel" id="phone" name="user_phone"
+                   placeholder="+380123456789"
+                   pattern="^\+380\d{9}$" required tabindex="3">
+        </p>
+
+        <p>
+            <label for="pass">Пароль (6 символів: A-z, 0-9):</label><br>
+            <input type="password" id="pass" name="user_pass"
+                   placeholder="Пароль"
+                   pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6}$"
+                   required tabindex="4">
+        </p>
+
+        <p>
+            <label for="birth">Дата народження:</label><br>
+            <input type="date" id="birth" name="birth_date" tabindex="5">
+        </p>
+
+        <p>
+            <label for="city_input">Ваше місто (Datalist):</label><br>
+            <input list="cities" id="city_input" name="city"
+                   placeholder="Оберіть або введіть" tabindex="6">
+            <datalist id="cities">
+                <option value="Чернівці"></option>
+                <option value="Київ"></option>
+                <option value="Львів"></option>
+                <option value="Одеса"></option>
+            </datalist>
+        </p>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>Опитування та вподобання</legend>
+
+        <p>
+            <b>Рівень освіти:</b><br>
+            <label><input type="radio" name="edu" value="bachelor" tabindex="7"> Бакалавр</label><br>
+            <label><input type="radio" name="edu" value="master" tabindex="8"> Магістр</label><br>
+            <label><input type="radio" name="edu" value="phd" tabindex="9"> PhD</label>
+        </p>
+
+        <p>
+            <b>Форма навчання:</b><br>
+            <label><input type="radio" name="form" value="full" tabindex="10"> Денна</label><br>
+            <label><input type="radio" name="form" value="extramural" checked tabindex="11"> Заочна (за замовчуванням)</label><br>
+            <label><input type="radio" name="form" value="evening" tabindex="12"> Вечірня</label>
+        </p>
+
+        <p>
+            <b>Мови програмування (обрати кілька):</b><br>
+            <label><input type="checkbox" name="lang" value="csharp" tabindex="13"> C#</label><br>
+            <label><input type="checkbox" name="lang" value="python" tabindex="14"> Python</label><br>
+            <label><input type="checkbox" name="lang" value="javascript" tabindex="15"> JavaScript</label><br>
+            <label><input type="checkbox" name="lang" value="cpp" tabindex="16"> C++</label>
+        </p>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>Списки</legend>
+
+        <p>
+            <label for="course">Курс навчання (3-й обрано):</label><br>
+            <select id="course" name="course" tabindex="17">
+                <option value="1">1 курс</option>
+                <option value="2">2 курс</option>
+                <option value="3" selected>3 курс</option>
+                <option value="4">4 курс</option>
+                <option value="5">5 курс</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="subjects">Улюблені предмети (Ctrl+Клік):</label><br>
+            <select id="subjects" name="subjects" multiple size="4" tabindex="18">
+                <option value="math">Вища математика</option>
+                <option value="os">Операційні системи</option>
+                <option value="prog">Програмування</option>
+                <option value="eng">Англійська мова</option>
+                <option value="db">Бази даних</option>
+                <option value="web">Веб-технології</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="specialty">Спеціальність (з групами optgroup):</label><br>
+            <select id="specialty" name="specialty" tabindex="19">
+                <optgroup label="Комп'ютерні науки">
+                    <option value="cs_se">Інженерія ПЗ</option>
+                    <option value="cs_ai">Штучний інтелект</option>
+                    <option value="cs_cy">Кібербезпека</option>
+                </optgroup>
+                <optgroup label="Економіка">
+                    <option value="ec_fin">Фінанси</option>
+                    <option value="ec_mkt">Маркетинг</option>
+                    <option value="ec_mgt">Менеджмент</option>
+                </optgroup>
+                <optgroup label="Філологія">
+                    <option value="fl_eng">Англійська</option>
+                    <option value="fl_ger">Німецька</option>
+                    <option value="fl_fra">Французька</option>
+                </optgroup>
+                <optgroup label="Право">
+                    <option value="lw_civ">Цивільне право</option>
+                    <option value="lw_crm">Кримінальне право</option>
+                    <option value="lw_int">Міжнародне право</option>
+                </optgroup>
+            </select>
+        </p>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>Додаткові дані</legend>
+
+        <p>
+            <label for="bio">Про себе (Textarea):</label><br>
+            <textarea id="bio" name="user_bio" rows="4" cols="40"
+                      placeholder="Напишіть декілька слів про свої захоплення..."
+                      tabindex="20"></textarea>
+        </p>
+
+        <p>
+            <label for="audio_files">Завантажити аудіофайли (кілька):</label><br>
+            <input type="file" id="audio_files" name="audio_files[]"
+                   accept="audio/*" multiple tabindex="21">
+        </p>
+    </fieldset>
+
+    <br>
+
+    <p>
+        <input type="submit" value="Відправити анкету" tabindex="22">
+        <input type="reset" value="Очистити форму" tabindex="23">
+    </p>
+
+</form>
+
+</body>
+</html>
