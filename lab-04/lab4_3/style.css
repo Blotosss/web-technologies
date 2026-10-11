@@ -1,0 +1,27 @@
+a {
+    color: purple;
+}
+
+.main-link {
+    color: green;
+}
+
+.berry-list {
+    list-style-type: square;
+}
+
+.veg-list {
+    list-style-type: '✓ ';
+}
+
+ul li ul {
+    list-style-type: none;
+}
+
+.berry-list a {
+    text-decoration: none;
+}
+
+.lorem-list {
+    list-style-position: inside;
+}
