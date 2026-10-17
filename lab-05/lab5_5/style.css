@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 30px;
+    background-color: #f5f7fa;
+    color: #333333;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    font-size: 18px;
+}
+
+/* Частина 1: box-sizing */
+.box-sizing-demo > div {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid #2980b9;
+    display: inline-block;
+    margin: 20px;
+    vertical-align: top;
+    background-color: #d4e6f1;
+}
+
+.box-sizing-demo .box-content {
+    box-sizing: content-box;
+}
+
+.box-sizing-demo .box-border {
+    box-sizing: border-box;
+}
+
+/* Частина 2: overflow */
+.overflow-demo > div {
+    width: 220px;
+    max-height: 80px;
+    border: 2px solid #e67e22;
+    background-color: #fef5e7;
+    margin: 20px;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+.overflow-demo .overflow-visible {
+    overflow: visible;
+}
+
+.overflow-demo .overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-demo .overflow-scroll {
+    overflow: scroll;
+}
+
+.overflow-demo .overflow-auto {
+    overflow: auto;
+}
+
+/* Частина 3: display */
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #34495e;
+}
+
+.nav-menu li {
+    display: inline-block;
+}
+
+.nav-menu li a {
+    display: block;
+    padding: 10px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #34495e;
+}
+
+.nav-menu li a:hover {
+    background-color: #1abc9c;
+}
+
+/* display: none повністю вилучає елемент зі структури відображення документа,
+тому він не займає місця на сторінці. На відміну від visibility: hidden
+(який приховує вміст, але залишає зайняте ним місце порожнім) або opacity: 0
+(який робить елемент прозорим, але зберігає його розміри і реакцію на події миші). */
+.nav-menu li:nth-child(4) {
+    display: none;
+}
