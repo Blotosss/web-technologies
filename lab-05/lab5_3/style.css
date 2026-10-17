@@ -1,0 +1,139 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eef2f7;
+    color: #2d3748;
+    line-height: 1.6;
+    margin: 0;
+    padding: 30px 15px;
+}
+
+.form-container {
+    max-width: 650px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1a365d;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+fieldset {
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f7fafc;
+}
+
+legend {
+    font-size: 16px;
+    font-weight: 700;
+    color: #2b6cb0;
+    padding: 0 10px;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+label, b {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 9px 12px;
+    margin-top: 5px;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    background-color: #ffffff;
+    font-size: 14px;
+    color: #2d3748;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #3182ce;
+    background-color: #ffffff;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 6px;
+    margin-top: 6px;
+}
+
+input[type="file"] {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #4a5568;
+}
+
+textarea {
+    resize: vertical;
+}
+
+select[multiple] {
+    height: 100px;
+}
+
+.form-actions {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 0;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+input[type="submit"] {
+    background-color: #3182ce;
+    color: #ffffff;
+}
+
+input[type="submit"]:hover {
+    background-color: #2b6cb0;
+}
+
+input[type="reset"] {
+    background-color: #e2e8f0;
+    color: #4a5568;
+}
+
+input[type="reset"]:hover {
+    background-color: #cbd5e0;
+}
