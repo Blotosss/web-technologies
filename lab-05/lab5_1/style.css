@@ -1,0 +1,52 @@
+.travel-planner {
+    background-color: rgb(255, 165, 0);
+    width: 500px;
+    padding: 20px;
+    color: white;
+}
+
+.planner-title {
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-position: inside;
+    background-image: url('icon.png');
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+}
+
+.stages-list {
+    background-color: rgb(103, 158, 128);
+    padding-right: 20px;
+    padding-left: 50px;
+    list-style-type: none;
+}
+
+.tasks-list {
+    font-size: 18px;
+    font-style: italic;
+    background-color: rgb(153, 180, 102);
+    margin-bottom: 10px;
+    padding-left: 40px;
+    list-style-type: none;
+}
+
+.stage-name, .task-name {
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.stage-name {
+    font-size: 20px;
+    font-weight: 700;
+    background-color: rgb(199, 124, 106);
+    margin-bottom: 10px;
+}
+
+.task-name {
+    background-color: rgb(218, 106, 32);
+}
