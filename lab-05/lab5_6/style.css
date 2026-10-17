@@ -1,0 +1,177 @@
+/* Фон сторінки (body) */
+body {
+    margin: 0;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+    color: #2c3e50;
+    background-color: #1b2a41;
+    background-image: url('img/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Контейнер (main)
+Коли вікно браузера вужче за 320px (значення min-width), контейнер перестає зменшуватись,
+зберігаючи фіксовану ширину 320px. Внаслідок цього контент не стискається понад ліміт,
+а у вікні браузера з'являється горизонтальна смуга прокручування. */
+main.container {
+    max-width: 900px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.88);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #1b2a41;
+}
+
+.section-block {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.section-block:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* Блок «Теги» (display)
+Властивості width та height не діють на рядкові елементи (display: inline),
+тому що згідно зі специфікацією CSS рядкові елементи формуються суто за розміром
+свого текстового вмісту та не створюють прямокутної блокової коробки. */
+.inline-div {
+    display: inline;
+    width: 200px;
+    height: 100px;
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 6px 12px;
+    margin-right: 8px;
+    border: 1px solid #2980b9;
+}
+
+.spans-wrapper {
+    margin-top: 20px;
+}
+
+.block-span {
+    display: block;
+    width: 150px;
+    background-color: #e67e22;
+    color: #ffffff;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+}
+
+/* Блок «Повторення фону» (background-repeat)
+Різниця між space та round:
+- space: фонове зображення повторюється цілу кількість разів без зміни масштабу.
+  Якщо залишається вільне місце, воно рівномірно розподіляється як порожні відступи між картинками.
+- round: фонове зображення масштабується (стискається або розтягується) так,
+  щоб ціле число копій повністю заповнило виділений простір без зазорів та обрізань. */
+.repeat-box {
+    height: 200px;
+    margin-bottom: 15px;
+    border: 2px solid #7f8c8d;
+    background-image: url('img/icon.png');
+    background-size: 60px 60px;
+    background-color: #ecf0f1;
+    font-weight: bold;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.repeat-x {
+    background-repeat: repeat-x;
+}
+
+.repeat-y {
+    background-repeat: repeat-y;
+}
+
+.repeat-space {
+    background-repeat: space;
+}
+
+.repeat-round {
+    background-repeat: round;
+}
+
+/* Блок «Масштабування» (background-size) */
+.size-box {
+    width: 300px;
+    height: 200px;
+    border: 2px solid #34495e;
+    background-image: url('img/photo.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.size-contain {
+    background-size: contain;
+    background-color: #bdc3c7;
+}
+
+.size-cover {
+    background-size: cover;
+}
+
+/* Блок «Прокручування фону» (background-attachment)
+Відмінність scroll від local:
+- scroll: фон зафіксований відносно самого елемента-контейнера,
+  тому під час скролу тексту всередині блоку фон залишається нерухомим.
+- local: фон прив'язаний до самого вмісту блоку,
+  тому він прокручується разом із текстом при його прокручуванні. */
+.attachment-box {
+    width: 45%;
+    max-height: 150px;
+    overflow: auto;
+    border: 2px solid #2c3e50;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 4%;
+    padding: 15px;
+    box-sizing: border-box;
+    background-image: url('img/photo.jpg');
+    color: #ffffff;
+    text-shadow: 1px 1px 3px #000000;
+}
+
+.attachment-box h3 {
+    margin-top: 0;
+}
+
+.attachment-scroll {
+    background-attachment: scroll;
+}
+
+.attachment-local {
+    background-attachment: local;
+}
