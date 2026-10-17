@@ -1,5 +1,5 @@
 .travel-planner {
-    background-color: rgb(255, 165, 0);
+    background-color: rgb(247, 160, 56);
     width: 500px;
     padding: 20px;
     color: white;
@@ -8,45 +8,63 @@
 .planner-title {
     font-size: 25px;
     font-weight: 900;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 ul {
-    list-style-position: inside;
-    background-image: url('icon.png');
-    background-position: left center;
-    background-repeat: no-repeat;
-    background-size: 16px 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .stages-list {
-    background-color: rgb(103, 158, 128);
-    padding-right: 20px;
-    padding-left: 50px;
-    list-style-type: none;
+    background-color: rgb(90, 140, 118);
+    padding: 15px;
 }
 
-.tasks-list {
-    font-size: 18px;
-    font-style: italic;
-    background-color: rgb(153, 180, 102);
-    margin-bottom: 10px;
-    padding-left: 40px;
-    list-style-type: none;
+.stage-item {
+    background-image: url('icon.png');
+    background-position: 10px 5px;
+    background-repeat: no-repeat;
+    background-size: 35px 35px;
+    padding-left: 55px;
+    margin-bottom: 25px;
 }
 
-.stage-name, .task-name {
-    padding: 10px 20px;
-    display: inline-block;
+.stage-item:last-child {
+    margin-bottom: 0;
 }
 
 .stage-name {
-    font-size: 20px;
+    display: inline-block;
+    font-size: 18px;
     font-weight: 700;
-    background-color: rgb(199, 124, 106);
+    background-color: rgb(204, 107, 83);
+    padding: 8px 15px;
     margin-bottom: 10px;
 }
 
+.tasks-list {
+    background-color: rgb(156, 182, 123);
+    padding: 10px;
+}
+
+.task-item {
+    background-image: url('icon.png');
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    padding-left: 45px;
+    margin-bottom: 8px;
+}
+
+.task-item:last-child {
+    margin-bottom: 0;
+}
+
 .task-name {
-    background-color: rgb(218, 106, 32);
+    display: inline-block;
+    background-color: rgb(224, 122, 56);
+    font-style: italic;
+    padding: 8px 15px;
 }
