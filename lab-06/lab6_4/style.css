@@ -1,0 +1,256 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.vertical-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 220px;
+    height: 100vh;
+    background-color: #1976d2;
+    z-index: 1000;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.v-menu, .v-submenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.v-menu-item {
+    position: relative;
+}
+
+.v-menu-link {
+    display: flex;
+    align-items: center;
+    padding: 14px 18px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.2s;
+}
+
+.nav-icon {
+    margin-right: 12px;
+    font-size: 22px;
+}
+
+.v-menu-item.active > .v-menu-link {
+    background-color: #0d47a1;
+    font-weight: bold;
+    border-left: 5px solid #ffd166;
+}
+
+.v-menu-item:hover > .v-menu-link {
+    background-color: #1565c0;
+}
+
+.v-submenu.level-2 {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 220px;
+    width: 200px;
+    background-color: #1565c0;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.v-menu-item:hover > .v-submenu.level-2 {
+    display: block;
+}
+
+.v-subitem {
+    position: relative;
+}
+
+.v-subitem > a {
+    display: block;
+    padding: 12px 16px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: background-color 0.2s;
+}
+
+.v-subitem:hover > a {
+    background-color: #0d47a1;
+}
+
+.v-submenu.level-3 {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 200px;
+    width: 190px;
+    background-color: #0d47a1;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.v-subitem:hover > .v-submenu.level-3 {
+    display: block;
+}
+
+.v-subitem-3 > a {
+    display: block;
+    padding: 10px 14px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.v-subitem-3:hover > a {
+    background-color: #082963;
+    color: #ffd166;
+}
+
+.main-content {
+    margin-left: 220px;
+    min-height: 100vh;
+}
+
+.horizontal-nav-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 900;
+    background-color: #3b3f45;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.horizontal-nav {
+    width: 100%;
+}
+
+.h-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.h-menu:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.h-menu-item {
+    float: left;
+    position: relative;
+}
+
+.h-menu-item.h-menu-item--right {
+    float: right;
+}
+
+.h-menu-link {
+    display: block;
+    padding: 12px 28px;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.2s;
+}
+
+.h-menu-link .material-symbols-outlined {
+    font-size: 26px;
+    display: block;
+}
+
+.h-menu-item.active > .h-menu-link {
+    background-color: #2e7d32;
+}
+
+.h-menu-item:hover > .h-menu-link {
+    background-color: #4f545c;
+}
+
+.h-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    background-color: #2f3237;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.h-dropdown--right {
+    left: auto;
+    right: 0;
+}
+
+.h-menu-item:hover > .h-dropdown {
+    display: block;
+}
+
+.h-dropdown li a {
+    display: block;
+    padding: 10px 16px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: background-color 0.2s;
+}
+
+.h-dropdown li a:hover {
+    background-color: #2e7d32;
+    color: #ffffff;
+}
+
+.content-body {
+    padding: 30px 40px;
+    max-width: 900px;
+}
+
+.content-body h1 {
+    margin-top: 0;
+    color: #1976d2;
+}
+
+.demo-box {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.scroll-filler {
+    height: 700px;
+    background: repeating-linear-gradient(
+        45deg,
+        #f9fafb,
+        #f9fafb 15px,
+        #f0f3f6 15px,
+        #f0f3f6 30px
+    );
+    border: 1px dashed #ccc;
+    border-radius: 6px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-filler:before {
+    content: 'Прокрутіть нижче (демонстрація fixed та sticky)...';
+    color: #888;
+    font-style: italic;
+}
